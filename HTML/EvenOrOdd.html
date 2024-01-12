@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Number even or odd</title>
+        <script>
+            function eo(){
+                var n1=parseInt(document.getElementById("num1").value);
+                if(n1%2==0){
+                    document.getElementById("even").innerHTML="even";
+                }
+                else {
+                    document.getElementById("odd").innerHTML="odd";
+                }
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br><br>
+        <p id="even"></p><br><br>
+        <p id="odd"></p><br>
+        
+        <input type="button" value="even or odd" onclick="eo()">
+    </center></body>
+</html>
+

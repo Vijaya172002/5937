@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Factorial</title>
+        <script>
+            function factorial(){
+                var n=document.getElementById("nid").value;
+                var sum=n;
+                while(n>1){
+                    sum=sum*(n-1);
+                    n--;
+                }
+                document.getElementById("n2").innerHTML=sum;
+            }
+        </script>
+    </head>
+    <body><center>
+        Number 1: <input type="text" id="nid"><br><br>
+        <p id="n2"></p><br><br>
+        <input type="button" value="Factorial" onclick="factorial()">
+
+    </center></body>
+</html>

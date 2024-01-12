@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/miracle/Desktop/5937/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2002593953.index
+2066837565.index
+517447282.index
+1366439066.index
+2062594879.index
+562391830.index
+3261998615.index

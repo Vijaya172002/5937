@@ -1,0 +1,93 @@
+package com.demo.ProjectEmpDetails;
+
+import java.text.SimpleDateFormat;
+
+import java.util.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class ProjectEmpDetailsService {
+	@Autowired
+	JdbcTemplate jt;
+	public String insert1(ProjectEmpDetailsPojo employee){
+		String fname="",email="",empjoindate="",status="",projassigneddate="",Role="";
+	
+		String result="";
+		Map<String,String> m=new HashMap<String, String>();
+		int i =employee.getId();
+		System.out.println("print");
+		String loginuname=employee.getLoginuname();
+		String loginpassword=employee.getLoginpassword();
+		String sql="select * from Emp2 where Username=? and Password=?";
+
+		List<Map<String, Object>> roleData=new ArrayList<Map<String,Object>>();
+		roleData=jt.queryForList(sql,loginuname,loginpassword);
+		String loginrole="";
+        if(!roleData.isEmpty()) {                             //to check the loginrole
+        	
+		for(Map fetchdata:roleData) {
+			loginrole=(String)fetchdata.get("role");
+		}
+		String Assignedby="";
+		if(loginrole.equals("P")) {                            //only project manager have access to insert data
+			
+
+			int id=employee.getId();
+		String sql1="select * from Emp2 where id=?";
+		List<Map<String,Object>> roleData1=new ArrayList<Map<String, Object>>();
+		roleData1=jt.queryForList(sql1,id);
+		if(roleData1.isEmpty()) {
+			result="Failed"+"Employee id is not matched";
+		}
+		else {
+			for(Map fetchdata:roleData1) {
+				fname=(String)fetchdata.get("Fname")+(String)fetchdata.get("Lname");
+				email=(String)fetchdata.get("Email");
+				Assignedby = (String)fetchdata.get("assignedby");
+				empjoindate=(String)fetchdata.get("Join date");
+				status=(String)fetchdata.get("Status");
+				int phoneno=employee.getPhoneno();
+
+				Role=(String)fetchdata.get("Role");
+			}
+
+			if(status.equals("B")&& Role.equals("E")) {
+				try {
+				String projid=employee.getProjid();
+			
+			Date  currentDate=new Date();
+			SimpleDateFormat DateFormat=new SimpleDateFormat("MM-dd-yyyy");
+			String Projassigneddate=DateFormat.format(currentDate);
+			String sql2="insert into ProjectEmpContact values(?,?,?,?,?,?,?,?)";
+			int ins=jt.update(sql2,id,fname,email,employee.getPhoneno(),employee.getProjid(),loginuname,empjoindate,Projassigneddate);
+			//To update the employee status from bench to available when an emp is allocated by any project. 
+			String statusUpdate="update Emp2 set Status=? where id=?";
+			jt.update(statusUpdate,"A",id);
+			result="inserted";
+
+			}
+				catch(Exception e) {
+					result ="Already used this ID"+e;
+				
+					
+				}
+			}else {
+			result="Project is already assigned";
+	}
+		}
+}
+		else {
+			result="Only Project Manager have an access ";
+		}
+		}else {
+			result="Username or passsword is  invalid";
+		}
+        
+		return result;
+        }
+
+}

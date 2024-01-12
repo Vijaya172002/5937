@@ -1,0 +1,5 @@
+1696568418604	Move 'MANIFEST.MF' to 'lib'
+1696568421726	Move 'WEB-INF' to 'META-INF'
+1696568440157	Move 'demo1.html' to 'webapp'
+1696568462721	Move 'demo1.html' to 'META-INF'
+1696568489139	Delete element

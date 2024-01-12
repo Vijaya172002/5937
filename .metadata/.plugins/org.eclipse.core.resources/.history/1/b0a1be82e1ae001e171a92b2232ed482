@@ -1,0 +1,25 @@
+package com.demo.Github;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.demo.Github.GithubTaskPojo;
+import com.demo.Github.GithubTaskServ;
+
+
+@RestController
+public class GithubTaskController {
+	@Autowired
+	GithubTaskServ gt;
+	@PostMapping("ProjectEmpInsertion")
+	public String insert1(@RequestBody GithubTaskPojo employee) {
+		return gt.insert1(employee);
+
+	}
+}

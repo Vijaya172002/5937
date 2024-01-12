@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title> Convertion of Celcius to Fahrenheat</title>
+        <script>
+            function cf(){
+                var n1=parseInt(document.getElementById("num1").value);
+                var fheat= n1*33.8;
+                document.getElementById("fheat").innerHTML=fheat;
+
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br><br>
+        
+        <p id="fheat"></p><br><br>
+        <input type="button" value="Cel to Fheat" onclick="cf()">
+    </center></body>
+</html>

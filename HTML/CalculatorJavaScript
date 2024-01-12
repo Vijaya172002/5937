@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Calculator JavaScript</title>
+<script>
+
+//Addition Operation
+function Add(){
+var a=parseInt(document.getElementById("id1").value);
+var b=parseINt(document.getElementById("id2").value);
+//document.write(a+b);
+console.log(a+b);
+}
+
+//Subtraction Operation
+function Sub(){
+var a=document.getElementById("id1").value;
+var b=document.getElementById("id2").value;
+if(a>b){
+    document.write(a-b);
+}
+else{
+    window.alert("please enter the valid option");
+}
+}
+
+//Multiplication Operation
+function Mul(){
+var a=document.getElementById("id1").value;
+var b=document.getElementById("id2").value;
+if(a==0 || b==0){
+    window.alert("Please enter the valid inputs");
+}
+else{
+    document.write(a*b);
+}
+}
+
+//Division OPeration
+function Div(){
+var a=document.getElementById("id1").value;
+var b=document.getElementById("id2").value;
+if(b!=0){
+    document.write(a/b);
+}
+else{
+    window.alert("Please enter the valid option");
+}
+}
+
+//Modulus Operation
+function Mod(){
+var a=document.getElementById("id1").value;
+var b=document.getElementById("id2").value;
+if(b!=0){
+    document.write(a%b);
+}
+else{
+    window.alert("Please enter the valid option");
+}
+}
+
+</script>
+<div style="border:1px line blue;padding:30px;margin-left:400px;margin-right:400px;background-color:grey;">  
+<center><h1 style="color:cyan">Simple Calculator</h1></center>
+</head>
+<body><center>
+<form name="Calculate">
+Number 1: <input type="text" id="id1" ></input><br><br>
+Number 2: <input type="text" id="id2" ></input><br><br>
+Choose the Operation:
+
+<select>
+
+<option value="Addition(+)" onclick="Add()">Addition</option> 
+<option value="Subtraction(-)" onclick="Sub()">Subtraction</option> 
+<option value="Multiplication(*)" onclick="Mul()">Multiplication</option> 
+<option value="Division(/)" onclick="Div()">Division</option> 
+<option value="Modulus(%)" onclick="Mod()">Modulus</option>
+<option value="None">none</option>
+
+<select>
+<br><br>
+<input type="button" value="submit"></input>
+</form></center>
+</body>
+</div>
+</html>

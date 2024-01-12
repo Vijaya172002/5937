@@ -1,0 +1,10 @@
+<html>
+<head>
+<script>
+window.alter("Hello World");
+</script>
+</head>
+<body>
+documentgetElementById("p1").InnerHTML="Hello World";
+</body>
+</html>

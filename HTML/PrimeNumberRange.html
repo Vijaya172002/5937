@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Prime number range</title>
+        <script>
+            function primerange(){
+                a="";
+            var n1=parseInt(document.f1.n1.value);
+            
+            for(let i=2;i<=n1;i++){
+                let ct=0;
+                    for(let j=2;j<i;j++){
+                        if(i%j==0) 
+                            ct++;
+                    }
+            if(ct==0){
+                a=a+" "+i;
+            }
+            console.log(a);
+                    document.getElementById("n3").innerHTML="prime number area= "+a;
+            }
+            }
+        </script>
+    </head>
+    <body><center>
+        <form name="f1">
+        Number 1: <input type="text" id="num1" name="n1"><br><br>
+        <input type="button" value="prime number range" onclick="primerange()"><br><br>
+        <p id="n3"></p><br>
+
+    </body></center>
+</html>

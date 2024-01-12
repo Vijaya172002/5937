@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Number pos neg or zero</title>
+        <script>
+            function PNZ(){
+                var n1=parseInt(document.getElementById("num1").value);
+                if(n1>0){
+                    document.getElementById("pos").innerHTML="pos";
+                }
+                else if(n1<0){
+                    document.getElementById("neg").innerHTML="neg";
+                }
+                else{
+                    document.getElementById("zero").innerHTML="zero";
+                }
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br><br>
+        <p id="pos"></p><br><br>
+        <p id="neg"></p> <br>
+        <p id="zero"></p>
+        <input type="button" value="pos or neg or zero" onclick="PNZ()">
+
+    </center></body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+
+</style>
+</head>
+<body>
+<div style="border:1px line blue;padding:50px;margin-left:300px;margin-right:300px;background-color:aqua;text-align:left;">  
+<div>
+<h1 style="text-align:center;color:Purple;" >Miracle Software Systems</h1>
+</div>
+<form>
+<p> Registration form </p>
+<br><p>Please enter the details here</p>
+
+<p><label>First Name: </label>
+<input type="text" ></p>
+<p><label>Middle Name: </label>
+<input type="text" ></p>
+<p><label>Last Name: </label> 
+<input type="text" ></p>
+<p><label>Father Name: </label>
+<input type="text" ></p>
+<p><label> Mother Name: </label>
+<input type="text" ></label>
+
+<p>Gender: 
+
+<input type="radio" name="gender" value="Male"><label>Male</label>
+<input type="radio" name="gender" value="Female"><label>Female</label>
+<p><label>Date of Birth: </label>
+<input type="date"></p>
+
+<p><label>Contact number: </label>
+<input type="text">
+
+<p><label>Email: </label>
+<input type="text">
+
+<p>Nationality: 
+<select>
+<option value="Indian">Indian</option>
+<option value="American">American</option>
+<option value="Other">Other</option>
+</select>
+</p>
+
+<p><label>Address: </label>
+<input type="text"></p>
+<p><label>Pin Code: </label>
+<input type="text"></p>
+
+<p>Languages Known: 
+<input type="checkbox" name="Language" value="English"><label>English</label>
+<input type="checkbox" name="Language" value="Telugu"><label>Telugu</label>
+<input type="checkbox" name="Language" value="Hindi"><label>Hindi</label>
+</p>
+<label>Comment: <textarea name="Comment" rows="3" cols="20"></textarea>
+</label></p>
+
+<p>Agree:
+<input type="checkbox" ><label> I solemnly declared the above data is true and valid </label> 
+
+<br><br>
+<button><a href="<button type="submit">SUBMIT</button></a>
+<button type="Cancel">CANCEL</button>
+</div>
+</form>
+</body>
+</html>

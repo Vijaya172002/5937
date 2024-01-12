@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> Miracle Software Systems</title>
+</head>
+<body>
+<marquee behavior="altenate" scrollamount=30 bgcolor="aqua">
+<h1 style="color: violet">Miracle Software Systems</h1>
+</marquee>
+<p align="middle">
+<p>Miracle Software Systems</p>
+<p align="middle">
+<button><a href ="https://miraclesoft.com">Home</a></button>
+<button><a href="https://careers.miraclesoft.com">Search</a></button>
+<button><a href="https://miraclesoft.com >contact >locations">Contact</a></button>
+</p>
+<img src="Miracle Software Systems.jpeg" width=300 height=200>
+</body>
+</html>

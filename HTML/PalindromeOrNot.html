@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Palindrome or not</title>
+        <script>
+            function pal(){
+                var a=document.getElementById("nid").value;
+                var str="";
+                var c="";
+                for(let i=a.length-1;i>=0;i++){
+                    str=str+a.charAt(i);
+                }
+                if(str==a){
+                    c="String is a Palindrome";
+                }
+                else{
+                    c="String is not a pallindrome";
+                }
+                document.getElementById("n3").innerHTML=c;
+            }
+        </script>
+    </head>
+    <body><center>
+        String 1:<input type="text" id="nid">
+        <p id="n3"></p>
+        <input type="button" value="Palindrome or not" onclick="pal()">
+    </center></body>
+</html>

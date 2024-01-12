@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Prime or not</title>
+        <script>
+            function prime(){
+                var a = document.getElementById("n").value;
+                var c;
+                for(let i=2;i<a;i++){
+                    if(a%i==0){   
+                        c=0;
+                    }
+                }
+                if(c==0){
+                    document.getElementById("n2").innerHTML=a+ " is not a Prime number";  
+                }
+                else{
+                    document.getElementById("n2").innerHTML=a+ " is a prime number";
+                }
+                
+                }
+        </script>
+    </head>
+    <body><center>
+        Number 1: <input type="text" id="n"><br><br>
+
+        <input type="button" value="prime or not" onclick="prime()"><br><br>
+        <p id="n2"></p><br>
+
+    </body></center>
+</html>

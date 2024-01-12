@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> Convertion of KM to mtrs</title>
+        <script>
+            function KmM(){
+                var n1=parseInt(document.getElementById("num1").value);
+                var mtrs= n1*1000;
+                var mile= n1*0.621371;
+                document.getElementById("mtrs").innerHTML=mtrs;
+                document.getElementById("mile").innerHTML=mile;
+
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br><br>
+        
+        <p id="mtrs"></p><br><br>
+        <p id="mile"></p><br><br>
+        <input type="button" value="KM to Mtr and mile" onclick="KmM()">
+    </center></body>
+</html>

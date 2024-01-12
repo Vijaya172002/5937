@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Validation Form</title>
+
+<script>
+function fstname1(){
+    var namef=document.getElementById("fnid").value;
+    var a=/^[A-Za-z]+$/;
+    //console.log(namef);
+
+    if(!namef.match(a)){
+        if(namef==""){
+            document.getElementById("fn").innerHTML="Enter name";
+        }
+        else{
+            document.getElementById("fn").innerHTML="Please enter characters in first name";
+        }
+    }
+    else if(namef.length>20){
+        document.getElementById("fn").innerHTML= "Please enter below 20 characters in first name";
+    }
+    else{
+        document.getElementById("fn").innerHTML="";
+    }
+}
+
+function lstname(){
+    var namel=document.getElementById("lnid").value;
+    var a=/^[A-Za-z]+$/;
+    if(!namel.match(a)){
+        if(namel==""){
+            document.getElementById("ln").innerHTML="Enter last name";
+        }
+        else{
+            document.getElementById("ln").innerHTML="Please enter only characters in last name";
+        }
+    }
+    else if(namel.length>20){
+        document.getElementById("ln").innerHTML= "Please enter below 20 characters in last name";
+    }
+    else{
+        document.getElementById("fn").innerHTML="";
+    }
+}   
+function phno()
+{
+    var phno=document.getElementById("Phid").value;
+    var a=/^[0-9]+$/;
+    if(!phno.match(a))
+    {
+        if(phno=="")
+        {
+            document.getElementById("ph").innerHTML="Please enter phone number";
+        }
+        else
+        {
+            document.getElementById("ph").innerHTML="Enter only digits";
+        }
+    }
+    else if(phno.length!=10)
+    {
+        document.getElementById("ph").innerHTML="Please enter 10 digit number";
+    }
+    else
+    {
+        document.getElementById("ph").innerHTML="";
+    }
+}
+function email()
+{
+    var email=document.getElementById("Eid").value;
+    var a=/^[a-zA-Z0-9.!#$%&'*+/=?^_]+@[a-zA-Z0-9]+\.[a-z]{2,}$/;  
+     // i.e, a-z,0-9 @ a-z . ({2,}means co,in,com etc i.e, min any two characters) 
+    if(!email.match(a))
+    {
+        if(email=="")
+        {
+            document.getElementById("m").innerHTML="Enter a email";
+        }
+        else
+        {
+            document.getElementById("m").innerHTML="Please use @ and .";
+        }
+    }
+    else
+    {
+        document.getElementById("m").innerHTML="";
+    }
+}
+function uname()
+{
+    var uname=document.getElementById("unid").value;
+    var a=/^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+    if(!uname.match(a))
+    {
+        if(uname==="")
+        {
+            document.getElementById("un").innerHTML="Enter user name";
+        }
+        else
+        {
+            document.getElementById("un").innerHTML="Please enter username with characters,symbols,digits";
+        }
+    }
+    else if(uname.length>20)
+    {
+        document.getElementById("un").innerHTML= "Please enter below 20 characters in user name";
+    }
+    else
+    {
+        document.getElementById("un").innerHTML="";
+    }
+}
+function pass()
+{
+    var pass=document.getElementById("Pid").value;
+    var a=/^(?=,'[A-Z])(?=,'[a-z])(?=,'\d)(?=,'[!@#$%^&*])[A-Z a-z\d!@#$%^&']+$/;
+    var up=/^[A-Z]+$/;
+    if(pass=="")
+    {
+        if(pass=="")
+        {
+            document.getElementById("pswd").innerHTML="Enter password";
+        }
+        else
+        {
+            document.getElementById("pswd").innerHTML="Please enter atleast 1 upper case 1 lower case 1 symbol and 1 digit";
+        } 
+    }
+    else if(pass.length<8 || pass.length>15)
+    {
+        document.getElementById("pswd").innerHTML="Password should contains 8-15 characters";
+    }
+    else
+    {
+        document.getElementById("pswd").innerHTML="";
+    }
+}
+function cpass()
+{
+    var a=document.getElementById("Pid").value;
+    var b=document.getElementById("CPid").value;
+    if(a==b)
+    {
+        document.getElementById("cpswd").innerHTML="";
+    }
+    else{
+        document.getElementById("cpswd").innerHTML="Confirm password is same as password";
+    } 
+}
+function addr(){
+    var ad=document.getElementById("Adid").value;
+    if(ad==""){
+        document.getElementById("ar").innerHTML="Please enter address";
+    }
+    else{
+        document.getElementById("ar").innerHTML="";
+    }
+}
+let l="";
+function sbmt()
+{
+    var n=/^[a-j]+$/;
+    if(l.match(n)&&l.length==10)
+    {
+        window.location.href="/home/miracle/5937/HTML/ValidateSuccess.html";
+    }
+    else
+    {
+         document.getElementById("s1").innerHTML="UnSuccess"+" "+n+"l1="+l;
+    }
+}
+    </script>
+    
+</head>
+<body>
+<div style="border:1px line rgb(58, 58, 136);padding:50px;margin-left:300px;margin-right:300px;background-color:aqua;text-align:left;">  
+<div>
+<h1 style="text-align:center;color:Purple;" >Student Registration Form</h1>
+</div>
+<form name=f1 autocomplete="off">
+
+<p>Please enter the details here</p>
+
+<table>
+<tr><td> First Name:    </td><td><input type ="text" id="fnid" onblur="fstname1()" ></td><td><p id="fn"></p></td></tr>
+<tr><td> Last Name:    </td><td><input type ="text" id="lnid" onblur="lstname()"> <p id="ln"></p></td></tr>
+<tr><td> phone number:  </td><td><input type ="text" id="Phid" onblur="phno()"><p id="ph"></p></td></tr>
+<tr><td> Email:         </td><td><input type ="text" id="Eid" onblur="email()" ><p id="m"></p></td></tr>
+<tr><td> Username:      </td><td><input type ="text" id="unid" onblur="uname()"><p id="un"></p></td></tr>
+<tr><td> Password:      </td><td><input type ="Password" id="Pid" onblur="pass()"><p id="pswd"></p></td></tr>
+<tr><td> Confirm password:  </td><td><input type ="Password" id="CPid" onblur="cpass()"><p id="cpswd"></p></td></tr>
+<tr><td> Address:    </td><td><input type ="text"  onblur="addr()" id="Adid"><p id="ar"></p></td></tr>
+<tr><td> Date of Birth: </td><td><input type ="date" name="Date"  id="Dob"></td></tr>
+</table>
+
+<p>Gender: 
+<input type="radio" name="gender" value="Male"><label>Male</label>
+<input type="radio" name="gender" value="Female"><label>Female</label>
+
+<p>Course: 
+<select>
+<option value="Btech">Btech</option>
+<option value="Mtech">Mtech</option>
+</select>
+</p>
+
+
+<p>State: 
+<select>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Telangana">Telangana</option>
+<option value="Other">Other</option>
+</select>
+</p>
+
+<p>Physically Disabled: 
+<select>
+<option> Select </option>
+<option>Yes </option>
+<option> No </option>
+</select><br><br>
+
+<tr><td>Comments:</td><td><textarea id="comments" maxlength="150" minlength="50"></textarea></td></tr><br>
+
+<tr><td>Agree: </td><td> <input type="checkbox" id="agree">To the terms and conditions</td></tr><br><br>
+
+<tr><td><input type="button" onclick ="sbmt()" value="Submit" style="width:70px; height:30px" ></td></tr><p id="s1"></p>
+
+</form>
+</div>
+</body>
+</html>

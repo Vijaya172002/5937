@@ -1,0 +1,37 @@
+package com.demo.Github;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+
+public class GithubTaskController {
+
+			@Autowired
+			GithubTaskPojo gt;
+			@PostMapping("Emp2")
+			public Map<String,String>insert(@RequestBody GithubTaskPojo employee){
+				Map<String, String> m=new HashMap<String, String>();
+				try {
+					int sql= gt.insert11(employee);
+				if(sql>0) {
+					m.put("Successful","Data inserted");
+				}
+				else {
+					m.put("Unsuccessful","Data not inserted");
+				}
+				}
+				catch(Exception e) {
+					m.put("Exception","incorrected"+e);
+				}
+				return m;
+			}
+		
+}

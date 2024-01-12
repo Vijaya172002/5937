@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> Largest among three</title>
+        <script>
+            function lrg(){
+                var n1=parseInt(document.getElementById("num1").value);
+                var n2=parseInt(document.getElementById("num2").values);
+                var n3=parseInt(document.getElementById("num3").values);
+                var n4=((n1 >n2) ? n1:n2)>n3 ? (n1>n2 ? n1:n2) :n3;
+                    document.getElementById("nid").innerHTML=n4;
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br><br>
+        Number 2: <input type="text" id="num2"><br><br>
+        Number 3: <input type="text" id="num3"><br><br>
+    
+        <p id="nid"></p><br><br>
+        <input type="button" value="Largest" onclick="lrg()">
+
+    </center></body>
+</html>

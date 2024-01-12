@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Sum of natural numbers</title>
+        <script>
+            function sn(){
+                var n1=document.getElementById("num1").value;
+                var sum=0;
+                for(let i=1;i<=n1;i++){
+                    sum=sum+i;
+                }document.getElementById("n2").innerHTML=sum;
+            }
+        </script>
+    </head>
+    <body><center>
+        Number 1:<input type="text" id="num1">
+        <p id="n2"></p><br>
+        <input type="button" value="Sum" onclick="sn()">
+    </center></body>
+</html>

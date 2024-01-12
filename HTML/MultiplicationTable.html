@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Multiplication table</title>
+        <script>
+            function multiplication(){
+                str=" "
+                var n1=document.getElementById("nid").value;
+                for(let i=1;i<=20;i++){
+                    str=str+" "+n1+"*"+i+"="+n1*i+"<br>";
+                    
+                }
+                document.getElementById("n2").innerHTML=str;
+            }
+        </script>
+    </head>
+    <body><center>
+        Number 1: <input type="text" id="nid"><br><br>
+        <p id="n2"></p><br><br>
+        <input type="button" value="Multiplication Table" onclick="multiplication()">
+
+    </center></body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Registration Form</title>
+
+<script>
+function phno(num)
+{
+    var phno=documentgetElementById("num")value;
+    var a=[0-9]
+    if(!num.match(a)){
+        document.getElementById("p1").innerHTML="Please enter number";
+        }
+    else if(num.length()!=10)
+    {
+        document.getElementById("p1").innerHTML="Enter 10 digit phno";
+    }
+    else{
+    document.getElementById("p1").innerHTML=" ";
+    }
+</script>    
+</head>
+<body>
+<div style="border:1px line blue;padding:50px;margin-left:300px;margin-right:300px;background-color:aqua;text-align:left;">  
+<div>
+<h1 style="text-align:center;color:Purple;" >Miracle Software Systems</h1>
+</div>
+<form>
+<p> Registration form </p><br>
+<p>Please enter the details here</p>
+
+<p><label>First Name: </label>
+<input type="text" id="fname"></p>
+<p><label>Middle Name: </label>
+<input type="text" id ="lname"></p>
+
+<p>Gender: 
+
+<input type="radio" name="gender" value="Male"><label>Male</label>
+<input type="radio" name="gender" value="Female"><label>Female</label>
+<p><label>Date of Birth: </label>
+<input type="date"></p>
+
+<p><label>phone number: </label>
+<input type="text" id ="p1"> </p>
+
+<p><label>Email: </label>
+<input type="text" ></p>
+
+<p>Nationality: 
+<select>
+<option value="Indian">Indian</option>
+<option value="American">American</option>
+<option value="Other">Other</option>
+</select>
+</p>
+
+<p><label>Physically Disabled: </label>
+<select>
+<option> value= "YES">YES </option>
+<option> value= "NO" > No </option>
+</select></p>
+
+<p >Agree: </p>
+<input type="checkbox" > I agree the agreement 
+
+</form>
+</div>
+</body>
+</html>

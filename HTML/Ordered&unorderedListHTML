@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Ordered list</title>
+</head>
+<p>Ordered list of names</p>
+<ol>
+<li>vijaya</li>
+<li>Shabana</li>
+<li>Sireesha</li>
+</ol>
+
+<p>Unordered list of names</p>
+<ul>
+<li>Vijaya</li>
+<li>Shabana</li>
+<li>Sireesha</li>
+</ul>
+</html>
+
+<!----> ORDERED LIST : Write the data with serial numbers 
+<!----> UNORDERED LIST: Write the data in bullet points

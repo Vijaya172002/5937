@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> Square root</title>
+        <script>
+            function squareroot(){
+                var n1=parseInt(document.getElementById("num1").value);
+                
+                var n2= Math.sqrt(n1);
+                document.getElementById("n2").innerHTML=n2;
+                //document.getElementById("n3").innerHTML=n2;
+
+            }        
+        </script>
+    </head>
+    <body><center><br>
+        Number 1: <input type="text" id="num1"><br>
+        <p id="n2"></p><br><br>
+        <!--<p id="n3"></p><br><br>-->
+
+        <input type="button" value="Square root" onclick="squareroot()">
+    </center></body>
+</html>

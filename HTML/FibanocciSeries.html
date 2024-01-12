@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Fibanocci series</title>
+        <script>
+            function fib(){
+            var a=document.getElementById("nid").value;
+            str="";
+            let s1=0,s2=1;
+            console.log(s1);
+            console.log(s2);
+            for(let i=1;i<a;i++){
+                temp=s1+s2;
+                s1=s2;
+                s2=temp;
+                console.log(i);
+                str=str+" "+s1;            
+            document.getElementById("n2").innerHTML=str;
+            }
+        }
+        </script>
+    </head>
+    <body><center>
+        Number 1:<input type="text" id="nid">
+        <p id="n2"></p>
+        <input type="button" value="Fibanocci Series" onclick="fib()">
+    </center></body>
+</html>
